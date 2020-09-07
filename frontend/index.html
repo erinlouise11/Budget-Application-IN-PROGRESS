@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+    <head id="home-page">
+        <title>Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8" />
+
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>        
+        <link rel="stylesheet" type="text/css" href="src/css/main.css">
+        <link rel="icon" href="data:;base64,=">
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->        
+        <!-- <script src="libs/ThreeNew.js"></script> -->
+        
+    </head>
+
+    <body>
+
+        <nav class="header" id="navs">
+            <a href="index.html" title="Home Page"><button class="nav-button" id="nav-home-button">DASHBOARD</button></a>
+            <a href="src/html/items.html" title="Edit Items"><button class="nav-button" id="nav-items-button">ITEMS</button></a>
+            <a href="src/html/payoff.html" title="Edit Payment Plans"><button class="nav-button" id="nav-plans-button">PAYMENT PLANS</button></a>
+            <a href="src/html/events.html" title="Edit Events"><button class="nav-button" id="nav-events-button">EVENTS</button></a>
+            <input type="checkbox" id="switch" name="theme" /><label class="toggle" for="switch">Toggle</label>
+        </nav> 
+
+            <div id="main">   
+                
+                <!-- <div id="container">
+                <canvas></canvas>
+                </div>-->
+
+                <div class="left-section" id="dashboard">
+    
+                    <center><h1>Bank Account</h1></center>                
+                    <div class="table" class="bubble-section" id="till-15">
+                        <div class="table-row">
+                            <div class="table-head"><h3>Left over till the 15th</h3></div>   
+                            <div class="table-cell" id="amount-till-15"></div>                
+                        </div>  
+                    </div>
+    
+                    <div class="table" class="bubble-section" id="till-next-15">
+                        <div class="table-row">
+                            <div class="table-head"><h3>Left over till next 15th</h3></div>   
+                            <div class="table-cell" id="amount-next-15"></div>                 
+                        </div>  
+                    </div>  
+                    
+                    <!-- <center><button class="clickButton" id="edit" title="UPDATE" onclick="window.location.href = 'src/html/items.html'">UPDATE</button></center> -->
+                </div>
+
+                <div class="right-section">
+                    <center><h1>Credit Cards</h1></center>
+                    <div class="balances">
+                        <div class="table" id="balance-table">
+                            <div class="table-row">
+                                <div class="table-cell" id="chase-label">Chase Card</div>
+                                <strong><div class="table-cell" id="chase-amount"></div></strong>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell" id="citi-label">Citibank Card</div>
+                                <strong><div class="table-cell" id="citi-amount"></div></strong>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell" id="bestbuy-label">Best Buy Card</div>
+                                <strong><div class="table-cell" id="bestbuy-amount"></div></strong>
+                            </div>
+                        </div>
+    
+                        <center><button class="click-button" id="update-balance-button" title="Update Balances"
+                                onclick="openForm()">UPDATE</button></center>
+                    </div>
+    
+                    <div class="form-popup" id="balance-update-form">
+                        <center><h2>Update Balance</h2></center>
+    
+                        <div class="input-area" id="card-selection">
+                            
+                            <label for="card-type">Credit Card </label><label class="required" id=card-required>*</label><br />
+                            <select name="cards" id="card-select">
+                                <option value="">Select an option</option>
+                                <option value="chase">Chase Credit Card</option>
+                                <option value="citi">Citi Credit Card</option>
+                                <option value="best-buy">Best Buy Credit Card</option>
+                            </select><br /><br />
+    
+                            <label for="amount">Amount </label><label class="required" id="amount-required">*</label><br />
+                            <input id="amount-input" type="number" name="amount"><br /><br />
+                        </div>
+    
+                        <center><button type="submit" class="click-button" id="submit" onclick="inputCreditAmounts()">Update</button>
+                        <button type="submit" class="click-button" id="close" onclick="closeForm()">Cancel</button>
+                        <button type="submit" class="click-button" id="done" onclick="saveCreditData()">Done</button></center>                
+    
+                    </div>
+    
+                    <div class="bank-button-group">
+                        <a href="https://www.chase.com/" title="Go to Chase Bank" target="Blank"><button class="bank-button"
+                                id="chaseLogo"></button></a>
+                        <a href="https://online.citi.com/US/login.do?locale=en_US" title="Go to Citi Bank"
+                            target="Blank"><button class="bank-button" id="citiLogo"></button></a>
+                        <a href="https://www.bestbuy.com/login" title="Go to BestBuy" target="Blank"><button class="bank-button"
+                                id="bestbuyLogo"></button></a>
+                    </div>            
+                </div>
+
+                <div class="left-section" id="payment-plans">
+    
+                    <center><h1>Payment Plans</h1></center>                
+                    <div class="table" class="bubble-section" id="plans">
+                        <!-- <div class="table-row">
+                            <div class="table-head"><h3>Left over till the 15th</h3></div>   
+                            <div class="table-cell" id="amountT15"></div>                
+                        </div>   -->
+                        <center><h3>No active plans</h3></center>
+                    </div>                  
+                    
+                    <!-- <center><button class="clickButton" id="edit" title="update" onclick="window.location.href = 'src/html/payoff.html'">CREATE PAYMENT PLAN</button></center> -->
+                </div>                  
+                
+        </div>   
+
+        <div class="main-section" id="events">
+            <center><h1>Events</h1></center>
+
+            <center><h3>2020</h3></center>
+            <div class="grid" id="event-squares">                       
+                <div class="grid-cell event-square" id="tomorrowland"></div> 
+                <div class="grid-cell event-square" id="wedding"></div>
+                <div class="grid-cell event-square" id="foofighters"></div>
+                <div class="grid-cell event-square" id="kayzo"></div>
+                <div class="grid-cell event-square" id="killswitch"></div>
+                <div class="grid-cell event-square" id="southafrica"></div>   
+            </div>      
+            
+            <!-- <center><h3>2021</h3></center>
+            <div class="grid" id="event-squares">                              
+
+            </div>   -->
+        </div>
+
+        <!-- <script src="src/js/particles.js"></script> -->
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,164 @@
+[
+    [
+        { 
+            "name": "Salary on 15th", 
+            "date": 15,
+            "till15": 0, 
+            "tillnext15": 3315, 
+            "scheduled": ""
+        },
+        { 
+            "name": "Salary on 31st", 
+            "date": 31,
+            "till15": 3315, 
+            "tillnext15": 3315, 
+            "scheduled": ""
+        },
+        { 
+            "name": "Previous Spare", 
+            "date": 0,
+            "till15": 11556, 
+            "tillnext15": 0,     
+            "scheduled": ""
+        }
+    ],
+
+    [
+        {
+            "name": "Best Buy", 
+            "date": 0,
+            "till15": 0, 
+            "tillnext15": -165, 
+            "scheduled": "YES"
+        },
+        { 
+            "name": "Loan Repayment", 
+            "date": 17,
+            "till15": 0, 
+            "tillnext15": -655, 
+            "scheduled": "NO"
+        },
+        { 
+            "name": "T-Mobile", 
+            "date": 15,
+            "till15": 0, 
+            "tillnext15": -45, 
+            "scheduled": "NO"
+        },
+        { 
+            "name": "Electricity", 
+            "date": 27,
+            "till15": 0, 
+            "tillnext15": -118, 
+            "scheduled": "YES"
+        },
+        { 
+            "name": "Youtube TV", 
+            "date": 31,
+            "till15": -50, 
+            "tillnext15": -50, 
+            "scheduled": "NO"
+        },
+        { 
+            "name": "Send to SA", 
+            "date": 0,
+            "till15": 0, 
+            "tillnext15": 0, 
+            "scheduled": "NO"
+        },
+        { 
+            "name": "Renter's Insurance", 
+            "date": 31,
+            "till15": -13, 
+            "tillnext15": -13, 
+            "scheduled": "NO"
+        },
+        { 
+            "name": "Spectrum", 
+            "date": 21,
+            "till15": 0, 
+            "tillnext15": -91, 
+            "scheduled": "YES"
+        },
+        { 
+            "name": "Jukely", 
+            "date": 28,
+            "till15": -5, 
+            "tillnext15": -5, 
+            "scheduled": "NO"
+        },
+        { 
+            "name": "Charity", 
+            "date": 20,
+            "till15": 0, 
+            "tillnext15": -20, 
+            "scheduled": "NO"
+        },
+        { 
+            "name": "Zwift & TP", 
+            "date": 15,
+            "till15": 0, 
+            "tillnext15": -32, 
+            "scheduled": "NO"
+        }, 
+        {   
+            "name": "Gym", 
+            "date": 1,
+            "till15": -254, 
+            "tillnext15": -254, 
+            "scheduled": "NO"
+        },
+        { 
+            "name": "Rent", 
+            "date": 1,
+            "till15": -1950, 
+            "tillnext15": -1950, 
+            "scheduled": "NO"
+        },
+        {
+            "name": "Pet Insurance", 
+            "date": 11,
+            "till15": -75, 
+            "tillnext15": -75, 
+            "scheduled": "NO"
+        },
+        { 
+            "name": "Netflix", 
+            "date": 1,
+            "till15": -12, 
+            "tillnext15": -12, 
+            "scheduled": "NO"
+        },
+        { 
+            "name": "Pretty Litter", 
+            "date": 3,
+            "till15": -40, 
+            "tillnext15": -40, 
+            "scheduled": "NO" 
+        },
+        { 
+            "name": "Apple Care", 
+            "date": 0,
+            "till15": -26, 
+            "tillnext15": -26, 
+            "scheduled": "YES" 
+        },
+        { 
+            "name": "Spotify", 
+            "date": 13,
+            "till15": -15, 
+            "tillnext15": -15, 
+            "scheduled": "YES" 
+        }
+    ],    
+
+    [
+        { 
+            "name": "LEFT OVER", 
+            "date": "0",
+            "till15": 12431, 
+            "tillnext15": 3064, 
+            "scheduled": "" 
+        }
+    ]    
+]

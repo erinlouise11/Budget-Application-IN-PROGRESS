@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+    <head id="items-page">
+        <title>Items</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8" />
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat' >
+        <link rel="icon" href="data:;base64,=">
+        <link rel="stylesheet" type="text/css" href="../css/main.css">                   
+    </head>
+
+    <body>
+        <nav class="header" id="navs">
+            <a href="../../index.html" title="Home Page"><button class="nav-button" id="nav-home-button">DASHBOARD</button></a>
+            <a href="items.html" title="Edit Items"><button class="nav-button" id="nav-items-button">ITEMS</button></a>
+            <a href="payoff.html" title="Edit Payment Plans"><button class="nav-button" id="nav-plans-button">PAYMENT PLANS</button></a>
+            <a href="events.html" title="Edit Events"><button class="nav-button" id="nav-events-button">EVENTS</button></a>
+            <input type="checkbox" id="switch" name="theme" /><label class="toggle" for="switch" id="nav-home-button">Toggle</label>
+        </nav>
+
+        <div class="main-section">    
+            
+            <center><h1>Item Summary</h1></center>
+
+            <table id="item-table">
+                <thead>
+                    <tr>
+                        <th>ITEM NAME</th>
+                        <th>PAY DATE</th>
+                        <th>TILL 15TH</th>
+                        <th>NEXT 15TH</th>
+                        <th>SCHEDULED</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot id="table-footer"></tfoot>
+            </table>
+
+            <div class="click-button-row" id="item-buttons">
+                <center><button class="click-button" id="add-item-button" onclick="openAddForm()">Add Item</button>
+                <button class="click-button" id="edit-item-button" onclick="openEditForm()">Edit Items</button></center><br />
+            </div>   
+
+            <form class="form-popup" id="add-item-form">
+                <center><h2>Add an Item</h2></center>
+
+                <div class="input-area">
+                    <label for="item name">Item Name </label><label class="required" id="item-required">*</label>
+                    <input id="item-name" type="text" name="name"><br /><br />
+                    <label for="amount">Amount </label><label class="required" id="amount-required">*</label>
+                    <input id="add-amount-input" type="number" placeholder="0.00" name="amount"><br /><br />                                            
+                    <label for="date">Date </label><label class="required" id="date-required">*</label>
+                    <input id="pay-date" type="text" name="date"><br /><br />
+                    <label for="scheduled">Sheduled (y/n)</label>
+                    <input id="scheduled" type="text" name="scheduled"><br /><br />  
+                </div>
+                
+                <center><button type="submit" class="click-button" id="submit" onclick="addItem()">Add</button>
+                <button type="submit" class="click-button" id="close" onclick="closeForm()">Cancel</button>
+                <button type="submit" class="click-button" id="done" onclick="sendItem()">Done</button></center>  
+            </form>   
+            
+            <div class="form-popup" id="edit-items-form">
+                <center><h2>Edit Items</h2></center>
+
+                <div class="input-area" id="item-selection">
+                    
+                    <label for="item">Item </label><label class="required" id=item-required>*</label><br />
+                    <select name="items" id="item-select">
+                        <option value="">Select an option</option>
+                        <option value="salary-15">Salary on 15th</option>
+                        <option value="salary-31">Saary on 31st</option>
+                        <option value="prev-spare">Previous Spare</option>
+                        <option value="best-buy">Best Buy</option>
+                        <option value="loan">Loan Repayment</option>
+                        <option value="tmobile">T-Mobile</option>
+                        <option value="electricity">Electricity</option>
+                        <option value="tv">YouTube TV</option>
+                        <option value="sa">South Africa</option>
+                        <option value="rent-insurance">Renter's Insurance</option>
+                        <option value="spectrum">Spectrum</option>
+                        <option value="jukely">Jukely</option>
+                        <option value="charity">Charity</option>
+                        <option value="training">Zwift / TP</option>
+                        <option value="gym">Gym</option>
+                        <option value="rent">Rent</option>
+                        <option value="pet-insurance">Pet Insurance</option>
+                        <option value="netflix">Netflix</option>
+                        <option value="litter">Pretty Litter</option>
+                        <option value="apple-care">Apple Care</option>
+                        <option value="spotify">Spotify</option>
+                    </select><br /><br />
+
+                    <label for="amount">Amount </label><label class="required" id="amount-required">*</label>
+                    <input id="edit-amount-input" type="number" placeholder="0.00" name="amount" required><br /><br />                                            
+                    <label for="date">Date</label>
+                    <input id="pay-date" type="text" name="date"><br /><br />
+                    <label for="scheduled">Sheduled (y/n)</label>
+                    <input id="scheduled" type="text" name="scheduled"><br /><br />  
+
+                </div>   
+
+                <center><button type="submit" class="click-button" id="submit" onclick="changeItems()">Accept</button>
+                <button type="submit" class="click-button" id="delete" onclick="deleteItem()">Delete</button>
+                <button type="submit" class="click-button" id="close" onclick="closeForm()">Cancel</button>
+                <button type="submit" class="click-button" id="done" onclick="sendItem()">Done</button></center>                          
+
+            </div>
+        </div>
+        
+        <script src="../js/items.js"></script>
+    </body>
+</html>

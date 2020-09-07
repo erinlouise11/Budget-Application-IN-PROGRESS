@@ -1,0 +1,14 @@
+[
+    {
+        "card" : "Chase Credit Card",
+        "balance": 1923
+    }, 
+    {
+        "card": "Citi Credit Card",
+        "balance": 0
+    }, 
+    {
+        "card": "Best Buy Credit Card",
+        "balance": 2228
+    }
+]
