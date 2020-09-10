@@ -50,7 +50,7 @@ class Card(db.Model):
             'interest_rate': self.interest_rate 
         }
 
-    item_card = db.relationship('Item', backref='Card', lazy=True)
+    item_card = db.relationship('Item', backref='cards', lazy=True)
 
 class Item(db.Model):
     __tablename__ = 'item'
@@ -59,7 +59,7 @@ class Item(db.Model):
     item_name = db.Column(db.String)
     amount = db.Column(db.Numeric)
     pay_date = db.Column(db.String)
-    card_id = db.Column(db.Integer, db.ForeignKey('Card.id'), nullable=False)
+    card_id = db.Column(db.Integer, db.ForeignKey('cards.id'), nullable=False)
     scheduled = db.Column(db.Boolean)
     active = db.Column(db.Boolean)
 

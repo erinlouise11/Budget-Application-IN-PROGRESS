@@ -9,6 +9,7 @@ def create_app(test_config=None):
   # create and configure the app
   app = Flask(__name__)
   setup_db(app)
+  
 
   # setting response headers
   @app.after_request
@@ -59,7 +60,7 @@ def create_app(test_config=None):
     }), 500
 
   return app
-  
+
 
 app = create_app()
 
